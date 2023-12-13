@@ -53,7 +53,7 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - Remove and environment variable
+ * _myunsetenv - Remove an environment variable
  * @info: structure containing potential argument
  * Return: always 0
  */
