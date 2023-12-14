@@ -34,10 +34,10 @@ char *_strncpy(char *dest, char *src, int c)
  **_strncat - concatenates two strings
  *@dest: the first string
  *@src: the second string
- *@s: the amount of bytes to be maximally used
+ *@n: the amount of bytes to be maximally used
  *Return: the concatenated string
  */
-char *_strncat(char *dest, char *src, int m)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 	char *s = dest;
@@ -46,13 +46,13 @@ char *_strncat(char *dest, char *src, int m)
 	j = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0' && j < m)
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	if (j < m)
+	if (j < n)
 		dest[i] = '\0';
 	return (s);
 }

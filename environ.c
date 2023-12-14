@@ -37,6 +37,7 @@ char *_getenv(info_t *info, const char *name)
 /**
  * _mysetenv - Initialize a new environment variable
  * or make changes to an existing one
+ * @info: Structure containing potential arguments.
  * Return: Always 0
  */
 
