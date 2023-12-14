@@ -8,8 +8,7 @@
 
 int _myenv(info_t *info)
 {
-	if (info != NULL)
-		print_list_str(info->env);
+	print_list_str(info->env);
 	return (0);
 }
 
@@ -22,11 +21,10 @@ int _myenv(info_t *info)
 
 char *_getenv(info_t *info, const char *name)
 {
-	if (info == NULL || name == NULL)
-		return (NULL);
-
-	list_t *node = info->env;
+	list_t *node
 	char *p;
+
+	node = info->env;
 
 	while (node)
 	{
@@ -41,7 +39,6 @@ char *_getenv(info_t *info, const char *name)
 /**
  * _mysetenv - Initialize a new environment variable
  * or make changes to an existing one
- * @info: Structure containing potential arguments.
  * Return: Always 0
  */
 
@@ -58,7 +55,7 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - Remove an environment variable
+ * _myunsetenv - Remove and environment variable
  * @info: structure containing potential argument
  * Return: always 0
  */
