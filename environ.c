@@ -24,7 +24,7 @@ char *_getenv(info_t *info, const char *name)
 	list_t *node
 	char *p;
 
-	node = info->env;
+	= info->env;
 
 	while (node)
 	{
