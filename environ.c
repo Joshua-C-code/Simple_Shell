@@ -8,7 +8,8 @@
 
 int _myenv(info_t *info)
 {
-	print_list_str(info->env);
+	if (info != NULL)
+		print_list_str(info->env);
 	return (0);
 }
 
@@ -21,6 +22,9 @@ int _myenv(info_t *info)
 
 char *_getenv(info_t *info, const char *name)
 {
+	if (info == NULL || name == NULL)
+		return (NULL);
+
 	list_t *node = info->env;
 	char *p;
 
